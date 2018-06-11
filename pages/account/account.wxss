@@ -1,0 +1,80 @@
+/* pages/account/account.wxss */
+
+.top {
+  background-color: #479bd6;
+  color: #fff;
+  text-align: center;
+  padding: 40rpx 0 100rpx 0;
+  line-height: 1;
+}
+
+.top .name {
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.top .money {
+  display: block;
+  font-size: 80rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+
+.list {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -100rpx;
+}
+
+.item {
+  position: relative;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding:0 30rpx;
+  border-radius:20rpx;
+}
+
+.item .name {
+  display: block;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item .money {
+  display: block;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 600;
+  padding: 20rpx 0;
+}
+
+.money-left {
+  flex: 1;
+}
+
+.money-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-wrap {
+display:inline-block;
+position:absolute;  
+font-size:24rpx;
+border:1px solid #3adda3;
+color:#3adda3;
+line-height:1;
+padding:4rpx 10rpx;
+right:30rpx;
+top:20rpx;
+border-radius:6rpx;
+
+}
+
+.green {
+  color: #3adda3;
+}
+
+.red {
+  color: #f7504a;
+}

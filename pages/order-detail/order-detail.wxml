@@ -1,0 +1,151 @@
+<!--pages/order-detail/order-detial.wxml-->
+<import src="../../tpl/stars/stars.wxml" />
+<view class='container'>
+  <view class='top'>
+    <image src='{{stateTabel.icon}}'></image>
+    <text class='title'>{{stateTabel.title}}</text>
+    <text class='tip'>{{stateTabel.desc}}</text>
+  </view>
+  <view class='address'>
+    <image class='icon' src='/img/home-0.png'></image>
+    <view class='content'>
+      <view class='row1'>
+        <text>{{order.orderUser}}</text>
+        <text class='tel'>{{order.userTele}}</text>
+      </view>
+      <text class='row2 text-ellipsis'>{{order.address}}</text>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='list'>
+      <view class='row'>
+        <text class='label'>订单状态</text>
+        <text>{{stateTabel.name}}</text>
+      </view>
+      <view class='row'>
+        <text class='label'>服务类型</text>
+        <text>{{order.goodsName}}</text>
+      </view>
+      <!-- <view class='row'>
+        <text class='label'>服务描述</text>
+        <text>2.0小时 日常保洁</text>
+      </view> -->
+      <view class='row' wx:if="{{order.serviceTime}}">
+        <text class='label'>服务时间</text>
+        <text>{{order.serviceTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='row space-between'>
+      <text class='label'>订单编号</text>
+      <text>{{order.remarkA}}</text>
+    </view>
+    <view class='row space-between'>
+      <text class='label'>下单时间</text>
+      <text>{{order.time}}</text>
+    </view>
+    <view class='row space-between' wx:if="{{order.goodsPrice}}">
+      <text class='label'>订单总价</text>
+      <text>{{order.goodsPrice}}元</text>
+    </view>
+  </view>
+  <view class='list' wx:if="{{starArr.length===3}}">
+    <view class='row'>
+      <text class='label'>服务质量</text>
+      <view class='star-list' wx:for="{{5}}">
+        <view class='star star{{index<starArr[0]?1:0}}'></view>
+      </view>
+    </view>
+    <view class='row'>
+      <text class='label'>服务速度</text>
+      <view class='star-list' wx:for="{{5}}">
+        <view class='star star{{index<starArr[1]?1:0}}'></view>
+      </view>
+    </view>
+    <view class='row'>
+      <text class='label'>服务态度</text>
+      <view class='star-list' wx:for="{{5}}">
+        <view class='star star{{index<starArr[2]?1:0}}'></view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{stateTabel.btn=='去支付'}}" class='coupon'>
+    <text>优惠券</text>
+    <picker wx:if="{{canuseCoupons.length>0}}" class='status' bindchange="bindPickerChange" range="{{array}}">
+      <view class="picker">{{canuseCoupons[couponIndex].couponName}}</view>
+      <image class='icon' src='/img/arrow-right.png'></image>
+    </picker>
+    <view wx:else>
+      <view class="picker">无可用</view>
+      <image class='icon' src='/img/arrow-right.png'></image>
+    </view>
+  </view>
+
+  <view wx:if="{{stateTabel.btn=='取消订单'}}" class='btns' bindtap='cancelOrder'>
+    <button size='mini'>取消订单</button>
+  </view>
+  <view wx:elif="{{stateTabel.btn=='去支付'}}" class='btns'>
+    <text class='totle'>实付款：￥{{totle-(canuseCoupons[couponIndex].couponMoney||0)}}</text>
+    <button size='mini' class='red' bindtap='goPay'>去支付</button>
+  </view>
+  <view wx:elif="{{stateTabel.btn=='评价'&&!order.comment}}" class='btns'>
+    <button size='mini' bindtap='showCommentModal'>评价</button>
+  </view>
+  <view wx:elif="{{stateTabel.btn=='施工结束'}}" class='btns'>
+    <button size='mini' bindtap='cancelOrder'>取消订单</button>
+    <button size='mini' bindtap='showPriceModal'>设置价格</button>
+    <button wx:if='{{order.serviceKinds==0&&order.updatePriceFlag==0}}' size='mini' bindtap='showTip' >施工结束</button>
+    <button wx:else size='mini' bindtap='compltOrder' class='red'>施工结束</button>
+  </view>
+  <text wx:else></text>
+</view>
+<!-- 
+<view class='comment-input' wx:if="{{showPriceModal}}">
+  <input class='left' type='digit' bindblur="priceBlur" auto-height placeholder="请输入服务价格" focus='{{showPriceModal}}'></input>
+  <view class='right'>
+    <button wx:if='{{onlyChangePrice}}' size='mini' bindtap='changePrice'>提交</button>
+    <button wx:else size='mini' bindtap='changeStateOver'>提交</button>
+  </view>
+</view> -->
+<form class='comment-input-wrap' bindsubmit="changePrice" wx:if="{{showPriceModal&&onlyChangePrice}}">
+  <view class='comment-input'>
+    <input name="goodprice" class='left' type='digit' auto-height placeholder="请输入服务价格" focus='{{showPriceModal}}'></input>
+    <view class='right'>
+      <button size='mini' formType="submit">提交</button>
+    </view>
+  </view>
+</form>
+
+<!-- <form class='comment-input-wrap' bindsubmit="changeStateOver" wx:elif="{{showPriceModal}}">
+  <view class='comment-input'>
+    <input name="goodprice" class='left' type='digit' auto-height placeholder="请输入服务价格" focus='{{showPriceModal}}'></input>
+    <view class='right'>
+      <button size='mini' formType="submit">提交</button>
+    </view>
+  </view>
+</form> -->
+
+
+<view class='modal' wx:if="{{showCommentModal}}">
+  <form bindsubmit="formSubmit" class='comment-form'>
+    <text class='title'>订单评价</text>
+    <view class='row'>
+      <text>服务质量</text>
+      <slider name="slider0" show-value max="5" value="5"></slider>
+    </view>
+    <view class='row'>
+      <text>服务速度</text>
+      <slider name="slider1" show-value max="5" value="5"></slider>
+    </view>
+    <view class='row'>
+      <text>服务态度</text>
+      <slider name="slider2" show-value max="5" value="5"></slider>
+    </view>
+    <view class="btn-area">
+      <button formType="cancel" size='mini' bindtap='hideCommentModal'>取消</button>
+      <button formType="submit" size='mini' class='red'>确定</button>
+    </view>
+  </form>
+
+</view>

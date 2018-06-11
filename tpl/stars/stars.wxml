@@ -1,0 +1,5 @@
+<template name="stars">
+  <view class='star-list' wx:for="{{5}}">
+    <view class='star star{{index<data?1:0}}'></view>
+  </view>
+</template>

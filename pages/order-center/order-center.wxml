@@ -1,0 +1,15 @@
+<!--pages/order-center/order-center.wxml-->
+<view class='container'>
+  <image class='bg' src='/img/order/center-top.png' mode='widthFix'></image>
+  <image class='bg' src='/img/order/center-bottom.png' mode='widthFix'></image>
+  <view class='main'>
+    <navigator class='item' url='../gorder-list/gorder-list'>
+      <image class='icon' src='/img/order/center-1.png'></image>
+      <text>商品订单管理</text>
+    </navigator>
+     <navigator class='item' url='../order/order'>
+      <image class='icon' src='/img/order/center-2.png'></image>
+      <text>服务订单管理</text>
+    </navigator>
+  </view>
+</view>

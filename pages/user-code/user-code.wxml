@@ -1,0 +1,4 @@
+<!--pages/user-code/user-code.wxml-->
+<view class='main'>
+    <image src='{{usercode}}' mode='widthFix'></image>
+</view>

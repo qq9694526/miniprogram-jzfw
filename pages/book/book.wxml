@@ -1,0 +1,42 @@
+<!--pages/book/book.wxml-->
+<view class='tip'>
+  <image class='icon' src='/img/icon!.png'></image>
+  <view class='text-wrap'>
+    <text>填写您的需求及必要资料或点</text>
+    <navigator url='../classify/classify'>服务分类</navigator>
+    <text>预约</text>
+  </view>
+</view>
+<form bindsubmit ="saveBook" report-submit="true">
+  <view class='form'>
+    <view class='choose' bindtap='chooseAddress'>
+      <image class='icon' src='/img/icon-dzgl.png'></image>
+      <view wx:if="{{address}}" class='address'>
+        <view class='text-bold'>
+          <text class='name'>{{address.name}}</text>
+          <text>{{address.tel}}</text>
+        </view>
+        <view class='info'>
+          <text>{{address.detail}}</text>
+        </view>
+      </view>
+      <view wx:else class='address'>请选择服务地址</view>
+      <image class='icon arrow' src='/img/arrow-right.png'></image>
+    </view>
+    <view class='section'>
+      <view class='section-title'>预约的服务（可多选）</view>
+      <view class='workers'>
+        <text class='item {{item.active?"active":""}}' wx:for='{{workers}}' bindtap='changeWorkerType' data-index='{{index}}'>{{item.name}}</text>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='section-title'>其他的需求简述</view>
+      <textarea placeholder="字数在200字左右" name="textarea" />
+    </view>
+    <!-- <navigator class='link' url='../classify/classify'>太麻烦？选择零工服务</navigator> -->
+  </view>
+  <view class="redbtn-fixed">
+    <button formType="submit">提交申请</button>
+  </view>
+
+</form>

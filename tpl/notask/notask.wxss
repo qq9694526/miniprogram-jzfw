@@ -1,0 +1,10 @@
+/* tpl/notask/notask.wxss */
+.notask{
+  display: flex;
+  flex-direction: column;
+  font-size:34rpx;
+  text-align: center;
+}
+.icon-wrap{
+  margin-bottom: 10rpx;
+}

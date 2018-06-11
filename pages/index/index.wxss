@@ -1,0 +1,149 @@
+@import "../../tpl/notask/notask.wxss";
+@import "../../tpl/liorder/liorder.wxss";
+
+.scroll-view_H {
+  white-space: nowrap;
+  background-color: #fff;
+  font-size: 0;
+  /* margin-bottom: 20rpx; */
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  width: 100%;
+}
+
+.scroll-view-item_H image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.worker-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+  padding:10rpx;
+background-color:#fff;
+
+}
+
+.worker {
+  flex: 0 0 50%;
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.worker-img {
+  flex: 0 0 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.worker-info {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.worker-desc {
+  color: #a9a9a9;
+}
+
+.notice-wrap {
+  background-color: #fff;
+}
+
+.notice {
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.notice .title {
+  font-size: 34rpx;
+}
+
+.notice .time {
+  text-align: right;
+  color: #a9a9a9;
+}
+
+.section-title {
+  position: relative;
+  background-color: #fff;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+  margin-top: 20rpx;
+}
+
+.section-title image {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.section-title .more {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  color: #707070;
+}
+
+.order {
+  margin-bottom: 20rpx;
+  margin-top: 0;
+}
+
+.notask-wrap {
+  margin-top: 100rpx;
+}
+
+.modal {
+  position: fixed;
+  top: 25%;
+  left: 0;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 60rpx;
+  border-radius: 20rpx;
+  right: 0;
+  border: 1px solid #eee;
+  font-size: 32rpx;
+}
+
+.modal button {
+  /* font-size: 28rpx; */
+  margin-top: 20rpx;
+  background-color: #d81e06;
+  color: #fff;
+}
+
+.fx-4 {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  flex-wrap:wrap;
+}
+
+.fx-4 .item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 25%;
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.fx-4 image {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}

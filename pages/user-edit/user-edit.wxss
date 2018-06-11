@@ -1,0 +1,103 @@
+
+
+.item {
+  margin-top: 20rpx;
+}
+
+.title {
+  display: block;
+  background-color: #fff;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-wrap .item {
+  flex: 0 0 50%;
+}
+
+.img-wrap image {
+  width: 100%;
+}
+
+.redbtn-fixed {
+  position: relative;
+}
+
+page {
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.tip {
+  line-height: 30rpx;
+  margin: 20rpx 0;
+  color: #a0a0a0;
+}
+
+.tip .icon {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+  margin: 0 6rpx;
+}
+
+.tip text {
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.form {
+  border-radius: 40rpx;
+  box-shadow: 0 0 4rpx #4e9cd6;
+  overflow: hidden;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdee4;
+}
+.row:last-child{
+  border-bottom: none;
+}
+
+.row text {
+  flex: 0 0 140rpx;
+  line-height: 100rpx;
+}
+
+.row input {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+}
+
+.section {
+  background-color: #fff;
+  margin-top: 10px;
+  /* padding-left: 20rpx; *//* border-bottom: 1px solid #dcdee4; */
+}
+
+.section:not(:last-child) {
+  border-bottom: 1px solid #dcdee4;
+}
+
+.section-title {
+  line-height: 2;
+}
+
+.link {
+  text-align: right;
+  margin-bottom: 10rpx;
+  padding-right: 20rpx;
+  line-height: 2;
+}

@@ -1,0 +1,128 @@
+/* pages/service/service.wxss */
+.container{
+  padding-bottom:80px;
+}
+.topimg {
+  width: 100%;
+}
+
+.baseinfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  background-color: #fff;
+  align-items: center;
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.name {
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+}
+
+.desc {
+  margin-bottom: 10rpx;
+}
+
+.text-red {
+  font-size: 28rpx;
+  color: #d81e06;
+}
+
+.howlong {
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.howlong .text {
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.howlong .btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.howlong button {
+  width: 15%;
+  line-height: 2;
+}
+
+.howlong button.active {
+  color: #d81e06;
+  border: 1px solid #d81e06;
+}
+
+.section {
+  background-color: #fff;
+}
+
+.section .title {
+  display: block;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.section .content {
+  padding: 20rpx;
+}
+
+.btn-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.btn-wrap .cart {
+  position: relative;
+  flex: 0 0 50%;
+  line-height: 100rpx;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: #333;
+}
+
+.cart .num {
+  position: absolute;
+  top: -10rpx;
+  left: -20rpx;
+  color: #f76662;
+  border: 2rpx solid #f76662;
+  border-radius: 50%;
+  line-height: 1;
+  padding: 4rpx 8rpx;
+  font-size: 20rpx;
+}
+
+.cart .icon-wrap {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.cart .text {
+  vertical-align: middle;
+}
+
+.cart .icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn-wrap button {
+  flex: 0 0 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #f76662;
+  color: #fff;
+  border-radius: 0;
+}

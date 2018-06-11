@@ -1,0 +1,42 @@
+<!--pages/order-confrim/order-confrim.wxml-->
+<view class='container'>
+  <view class='choose' bindtap='chooseAddress'>
+    <image class='icon' src='/img/icon-dzgl.png'></image>
+    <view wx:if="{{address}}" class='address'>
+      <view class='text-bold'>
+        <text class='name'>{{address.name}}</text>
+        <text>{{address.tel}}</text>
+      </view>
+      <view class='info'>
+        <text>{{address.detail}}</text>
+      </view>
+    </view>
+    <view wx:else class='address'>请选择服务地址</view>
+    <image class='icon arrow' src='/img/arrow-right.png'></image>
+  </view>
+  <view class='list'>
+    <view class='item' bindtap='goService'>
+      <image class='img' src='{{service.imageUrl}}' mode='center'></image>
+      <view class='info'>
+        <text class='name'>{{service.goodsTitle}}</text>
+        <text class='desc'>{{service.goodsSub}}</text>
+        <view class='price' wx:if="{{service.goodsPrice}}">
+          <text class='text-red'>{{service.goodsPrice}}</text>
+          <text wx:if="{{service.remarkA}}">{{service.remarkA}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='tips'>
+    <text class='title'>温馨提示</text>
+    <text class='row'>-温馨提示；大撒旦送多萨克拉高达撒的谎悼念萨达宏sad</text>
+    <text class='row'>-温馨提示；大撒旦送啊等候高达撒的萨达宏sad</text>
+    <text class='row'>-温馨提示；大撒旦送啊等候拉高达撒的谎悼念萨达宏sad</text>
+    <text class='row'>-温啊等候阿什顿多萨克拉高达撒的谎dkjsahdioahd都哈是否啊哈都悼念萨达宏sad</text>
+  </view> -->
+</view>
+<form report-submit="true" bindsubmit="goOrderDetail">
+  <view class='redbtn-fixed'>
+    <button form-type='submit'>提交订单</button>
+  </view>
+</form>

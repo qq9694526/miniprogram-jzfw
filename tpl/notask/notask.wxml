@@ -1,0 +1,8 @@
+<template name="notask">
+  <view class='notask'>
+    <view class='icon-wrap'>
+      <icon type="warn" size="70" color="rgb(178,178,178)" />
+    </view>
+     <text>{{text}} </text>
+  </view>
+</template>

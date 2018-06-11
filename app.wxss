@@ -1,0 +1,36 @@
+/**app.wxss**/
+page{
+  font-size: 28rpx;
+  background-color: #f5f5f5;
+}
+.text-ellipsis{
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.text-ellipsis2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.redbtn-fixed{
+  position: fixed;
+  left:0;
+  bottom: 10rpx;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 100;
+}
+.redbtn-fixed button{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #1099d7;
+  color: #fff;
+  border-radius: 50rpx;
+  box-shadow: 0 15rpx 10rpx rgba(16, 153, 215, .2);
+}

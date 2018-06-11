@@ -1,0 +1,28 @@
+<!--pages/service/service.wxml-->
+<view class='container'>
+  <image class='topimg' src='{{good.mainPicture}}' mode='widthFix'></image>
+  <view class='baseinfo'>
+    <text class='name'>{{good.goodsName}}</text>
+    <text class='desc'>{{good.goodsBrief}}</text>
+    <view class='price' wx:if="{{good.goodsRealPrice}}">
+      <text class='text-red'>{{good.goodsRealPrice}}</text>
+      <text wx:if="{{good.priceUnit}}">{{good.priceUnit}}</text>
+    </view>
+  </view>
+  <view class='section'>
+    <text class='title'>服务介绍：</text>
+    <rich-text nodes="{{good.goodsDesc}}"></rich-text>
+    <!-- <view class='content'>{{good.goodsDesc}}</view> -->
+  </view>
+  <view class='btn-wrap'>
+  <navigator class='cart' url='../goods-cart/goods-cart'>
+  <view class='icon-wrap'>
+  <image class='icon' src='/img/mycart.png'></image>
+  <text wx:if="{{goodsNum>0}}" class='num'>{{goodsNum}}</text>
+  </view>
+  <text class='text'>购物车</text>
+  </navigator>
+  <button wx:if="{{tel}}" bindtap='addCart'>加入购物车</button>
+  <button wx:else open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">加入购物车</button>
+  </view>
+</view>

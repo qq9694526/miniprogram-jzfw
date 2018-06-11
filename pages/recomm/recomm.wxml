@@ -1,0 +1,23 @@
+<!--pages/recomm/recomm.wxml-->
+<import src="../../tpl/notask/notask.wxml" />
+<import src="../../tpl/litask/litask.wxml" />
+<view class='container'>
+  <!-- <view class='listbar' bindtap='changeListBar'>
+    <view class='item {{activeItem==1?"active":""}}'>
+      <text data-item="0">推荐的用户({{list[0].length}})</text>
+      <view class='line'></view>
+    </view>
+    <view class='item {{activeItem==0?"active":""}}'>
+      <text data-item="1">推荐的零工({{list[1].length}})</text>
+      <view class='line'></view>
+    </view>
+  </view> -->
+</view>
+<view wx:if="{{list[activeItem].length===0}}" class='notask-wrap'>
+  <template is="notask" data="{{text:noTaskText}}" />
+</view>
+<view wx:else class='list'>
+  <view class='item' wx:for="{{list[activeItem]}}" wx:key="item">
+    <template is="litask" data='{{item}}' />
+  </view>
+</view>

@@ -1,0 +1,93 @@
+/* pages/classify/classify.wxss */
+@import "../../tpl/notask/notask.wxss";
+page {
+  background-color: #fff;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.menu-wrap {
+  flex: 0 0 auto;
+  border-right: 1px solid #eee;
+}
+
+.menu {
+  width: 150rpx;
+  padding: 16rpx 0;
+  margin: 20rpx 0;
+  text-align: center;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+.menu.active {
+  color: #d81e06;
+  border-left-color: #d81e06;
+}
+
+.title {
+  display: block;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  background-color: #fff;
+}
+
+.section-image {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.item {
+  display: flex;
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.item .img {
+  flex: 0 0 160rpx;
+  width: 160rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+
+.name {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.desc {
+  color: #a8a8a8;
+}
+
+.text-red {
+  font-size: 28rpx;
+  color: #d81e06;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.content .scroll-view {
+  height: 100%;
+  width: 100%;
+}

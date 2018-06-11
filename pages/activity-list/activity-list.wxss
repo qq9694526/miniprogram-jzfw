@@ -1,0 +1,18 @@
+/* pages/activity-list/activity-list.wxss */
+.notice-wrap {
+  background-color: #fff;
+}
+
+.notice {
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.notice .title {
+  font-size: 34rpx;
+}
+
+.notice .time {
+  text-align: right;
+  color: #a9a9a9;
+}

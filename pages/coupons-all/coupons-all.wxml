@@ -1,0 +1,18 @@
+<!--pages/coupons-all/coupons-all.wxml-->
+<view wx:for="{{coupons}}">
+  <view class='item {{item.sendType==2?"yellow":"red"}}'>
+    <view class='left'>
+      <view class='row1'>
+      <view class='icon'></view>
+        <text class='money'>{{item.couponMoney}}</text>
+      </view>
+      <view class='name'>{{item.couponName}}</view>
+      <view class='time'>
+        <text>截止时间：{{item.time}}</text>
+      </view>
+    </view>
+    <view class='right'>
+      <view class='btn' bindtap='getCoupon' data-id='{{item.id}}'></view>
+    </view>
+  </view>
+</view>

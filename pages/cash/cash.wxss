@@ -1,0 +1,76 @@
+/* pages/cash/cash.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.input-wrap {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 40rpx;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.2);
+  padding: 0 20rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+}
+
+.row1 {
+  line-height: 120rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.row1 image {
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  line-height: 120rpx;
+}
+
+.row2 text {
+  flex: 0 0 150rpx;
+}
+
+.row2 input {
+  flex: 1;
+  text-align: right;
+  line-height: 120rpx;
+  height: 120rpx;
+  color: #faa3a1;
+}
+
+.btn {
+  width: 90%;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #3adda3;
+  color: #fff;
+  border-radius: 50rpx;
+  box-shadow: 0 15rpx 10rpx rgba(58, 221, 163, 0.2);
+  text-align: center;
+}
+
+.aside {
+  display: flex;
+  margin-top: 40rpx;
+}
+
+.aside .item {
+  flex: 0 0 33%;
+  text-align: center;
+}
+
+.aside image {
+  display: block;
+  width: 35rpx;
+  height: 40rpx;
+  margin: 0 auto;
+}

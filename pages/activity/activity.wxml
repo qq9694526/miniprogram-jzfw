@@ -1,0 +1,13 @@
+<!--pages/activity/activity.wxml-->
+<import src="/tpl/wxParse/wxParse.wxml"/>
+<view class='container'>
+<view class='title'>
+<text>{{activity.conTitle}}</text>
+</view>
+<view class='time'>
+<text>{{activity.time}}</text>
+</view>
+<view class='content'>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+</view>

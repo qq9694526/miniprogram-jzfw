@@ -1,0 +1,40 @@
+.order{
+  background-color: #fff;
+  padding: 20rpx 20rpx 0 20rpx;
+  margin-top: 20rpx;
+}
+.order-title{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20rpx;
+  align-items: baseline;
+}
+.order-title .title{
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.order-title .status{
+  color: #1f9ad7;
+  font-size: 24rpx;
+}
+.order-title .status.grey{
+  color: rgb(152, 152, 152)
+}
+.content{
+  padding: 20rpx 10rpx;
+}
+.row{
+  display: flex;
+  align-items: middle;
+  padding:10rpx 0;
+}
+.row image{
+  flex: 0 0 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.row text{
+  flex:  1 1 100%;
+  line-height: 1;
+}

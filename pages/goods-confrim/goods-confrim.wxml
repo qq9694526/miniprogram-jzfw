@@ -1,0 +1,67 @@
+<!--pages/good-confrim/good-confrim.wxml-->
+<view class='container'>
+  <view class='choose' bindtap='chooseAddress'>
+    <image class='icon' src='/img/icon-dzgl.png'></image>
+    <view wx:if="{{address}}" class='address'>
+      <view class='text-bold'>
+        <text class='name'>{{address.name}}</text>
+        <text>{{address.tel}}</text>
+      </view>
+      <view class='info'>
+        <text>{{address.detail}}</text>
+      </view>
+    </view>
+    <view wx:else class='address'>请选择服务地址</view>
+    <image class='icon arrow' src='/img/arrow-right.png'></image>
+  </view>
+  <view class='list'>
+    <view class='item' wx:for="{{list}}">
+      <image class='img' src='{{item.goodsPictureUrl}}' mode='scaleToFill'></image>
+      <view class='info'>
+        <text class='name'>{{item.goodsName}}</text>
+        <text class='desc'>{{item.goodsBrief}}</text>
+        <view class='price'>
+          <text class='text-red'>￥{{item.goodsRealPrice}}</text>
+          <text class='num'>X{{item.goodsNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='coupon'> 
+    <text>优惠券</text>
+    <picker wx:if="{{canuseCoupons.length>0}}" class='status' bindchange="bindPickerChange" range="{{array}}">
+      <view class="picker">{{canuseCoupons[couponIndex].couponName}}</view>
+      <image class='icon' src='/img/arrow-right.png'></image>
+    </picker>
+    <view wx:else>
+      <view class="picker">无可用</view>
+      <image class='icon' src='/img/arrow-right.png'></image>
+    </view>
+  </view>
+  <view class='money-wrap'>
+    <view class='row'>
+      <text>商品金额</text>
+      <text class='color-red'>￥{{totle}}</text>
+    </view>
+    <view class='row'>
+      <text>优惠金额</text>
+      <text class='color-red'>- ￥{{parseFloat(canuseCoupons[couponIndex].couponMoney).toFixed(2)||'0.00'}}</text>
+    </view>
+    <view class='row'>
+      <text>运费</text>
+      <text class='color-red'>+ ￥0.00</text>
+    </view>
+  </view>
+</view>
+
+<form report-submit="true" bindsubmit="submitOrder">
+<view class="pay-wrap">
+  <view class='left'>
+    <text class='totle'>实付款：￥{{totle-(canuseCoupons[couponIndex].couponMoney||0)}}</text>
+  </view>
+  <view class='right' >
+    <!-- <text>提交订单</text> -->
+    <button form-type='submit'>提交订单</button>
+  </view>
+</view>
+</form>

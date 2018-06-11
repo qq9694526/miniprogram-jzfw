@@ -1,0 +1,31 @@
+<!--pages/service/service.wxml-->
+<view class='container'>
+  <image class='topimg' src='{{service.imageUrl}}' mode='widthFix'></image>
+  <view class='baseinfo'>
+    <text class='name'>{{service.goodsTitle}}</text>
+    <text class='desc'>{{service.goodsSub}}</text>
+    <view class='price' wx:if="{{service.goodsPrice}}">
+      <text class='text-red'>{{service.goodsPrice}}</text>
+      <text wx:if="{{service.remarkA}}">{{service.remarkA}}</text>
+    </view>
+  </view>
+  <!-- <view class='howlong'>
+    <text class='text'>选择服务时长（小时）</text>
+    <view class='btns'>
+      <button class='active' size='mini'>2</button>
+      <button size='mini'>3</button>
+      <button size='mini'>4</button>
+      <button size='mini'>5</button>
+      <button size='mini'>6</button>
+    </view>
+  </view> -->
+  <view class='section'>
+    <text class='title'>服务介绍：</text>
+    <rich-text nodes="{{service.goodsDesc}}"></rich-text>
+    <!-- <view class='content'>{{service.goodsDesc}}</view> -->
+  </view>
+  <view class='redbtn-fixed'>
+  <button wx:if="{{tel}}" bindtap='orderConfrim'>立即下单</button>
+  <button wx:else open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即下单</button>
+  </view>
+</view>

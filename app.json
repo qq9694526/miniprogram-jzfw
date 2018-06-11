@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/gorder-list/gorder-list",
+    "pages/gorder-detail/gorder-detail",
+    "pages/cash/cash",
+    "pages/coupons-all/coupons-all",
+    "pages/book/book",
+    "pages/goods-cart/goods-cart",
+    "pages/user/user",
+    "pages/audit/audit",
+    "pages/dispatch/dispatch",
+    "pages/user-edit/user-edit",
+    "pages/classify/classify",
+    "pages/order-detail/order-detail",
+    "pages/order-confrim/order-confrim",
+    "pages/service/service",
+    "pages/account/account",
+    "pages/order/order",
+    "pages/recomm/recomm",
+    "pages/activity/activity",
+    "pages/goods-classify/goods-classify",
+    "pages/goods-detail/goods-detail",
+    "pages/coupons-my/coupons-my",
+    "pages/activity-list/activity-list",
+    "pages/user-code/user-code",
+    "pages/book-my/book-my",
+    "pages/order-center/order-center",
+    "pages/goods-confrim/goods-confrim",
+    "pages/book-detail/book-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小卷尺零工服务",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8d8d8d",
+    "selectedColor": "#5a9cd6",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "iconPath": "/img/home-0.png",
+        "selectedIconPath": "/img/home-1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/img/book-0.png",
+        "selectedIconPath": "/img/book-1.png",
+        "pagePath": "pages/book/book",
+        "text": "零工预约"
+      },
+      {
+        "iconPath": "/img/shop-0.png",
+        "selectedIconPath": "/img/shop-1.png",
+        "pagePath": "pages/goods-classify/goods-classify",
+        "text": "零材商城"
+      },
+      {
+        "iconPath": "/img/order-0.png",
+        "selectedIconPath": "/img/order-1.png",
+        "pagePath": "pages/order-center/order-center",
+        "text": "订单中心"
+      },
+      {
+        "iconPath": "/img/user-0.png",
+        "selectedIconPath": "/img/user-1.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  }
+}

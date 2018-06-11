@@ -1,0 +1,39 @@
+<import src="../../tpl/notask/notask.wxml" />
+
+<view class="item-box">
+  <view wx:if="{{list.length===0}}" class='notask-wrap'>
+    <template is="notask" data="{{text:noOrderTip}}" />
+  </view>
+  <view wx:else class="items">
+    <view wx:for="{{list}}" wx:key="{{index}}" class="item">
+      <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner content">
+        <view class='checkbox {{item.checked?"checked":""}}' data-item-index="{{index}}" bindtap='checked'></view>
+        <image class='img' src='{{item.goodsPictureUrl}}'></image>
+        <view class='info'>
+          <text>{{item.goodsName}}</text>
+          <view>
+            <text class='price'>￥{{item.goodsRealPrice}}</text>
+            <view class="selnum">
+              <view class="cut" bindtap="updateNum" data-item-index="{{index}}" data-step="-1">-</view>
+              <input value="{{item.goodsNum}}" class="number" disabled="true" type="number" />
+              <view class="add" bindtap="updateNum" data-item-index="{{index}}" data-step="1">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view data-index="{{index}}" bindtap="delItem" class="inner del">删除</view>
+    </view>
+  </view>
+</view>
+<view class="pay-wrap">
+  <view class='left'>
+    <view>
+      <view class='checkbox {{isCheckedAll?"checked":""}}' bindtap='checkedAll'></view>
+      <text>全选</text>
+    </view>
+    <text class='totle'>合计：{{totle}}</text>
+  </view>
+  <view class='right' bindtap='goOrderConfirm'>
+    <text>结算</text>
+  </view>
+</view>

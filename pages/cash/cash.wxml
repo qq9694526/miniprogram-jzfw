@@ -1,0 +1,28 @@
+<!--pages/cash/cash.wxml-->
+<form bindsubmit="goPay">
+  <view class='input-wrap'>
+    <view class='row1'>
+      <image src='/img/cash/logo.png'></image>
+      <text>家政服务</text>
+    </view>
+    <view class='row2'>
+      <text>消费总金额</text>
+      <input name="money" type='digit' focus='true'></input>
+    </view>
+  </view>
+  <button class='btn' formType="submit">微信支付</button>
+</form>
+<view class='aside'>
+  <view class='item'>
+    <image src='/img/cash/cash-1.png'></image>
+    <text>快捷支付</text>
+  </view>
+  <view class='item'>
+    <image src='/img/cash/cash-2.png'></image>
+    <text>安全交易</text>
+  </view>
+  <view class='item'>
+    <image src='/img/cash/cash-3.png'></image>
+    <text>尽享优惠</text>
+  </view>
+</view>

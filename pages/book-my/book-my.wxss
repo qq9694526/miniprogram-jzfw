@@ -1,0 +1,10 @@
+/* pages/book-my/book-my.wxss */
+@import "../../tpl/notask/notask.wxss";
+@import "../../tpl/liorder/liorder.wxss";
+.notask-wrap{
+  margin-top: 200rpx;
+}
+.order-title .status {
+  min-width: 100rpx;
+  text-align: right;
+}

@@ -1,0 +1,26 @@
+<!--pages/account/account.wxml-->
+<view class='container'>
+  <view class='top'>
+    <text class='name'>帐户总金额</text>
+    <text class='money'>{{account.totalAcount}}</text>
+  </view>
+  <view class='list'>
+    <view class='item'>
+      <view>
+        <text class='name'>可提现金额</text>
+        <view class='btn-wrap'>
+          <text wx:if='{{account.remark1==1}}' class='btn'  bindtap='extracting'>提现中</text>
+          <text wx:else class='btn'  bindtap='extract'>提现</text>
+        </view>
+      </view>
+      <view class='money-wrap'>
+        <text class='money green'>{{account.availAcount}}</text>
+      </view>
+
+    </view>
+    <view class='item'>
+      <text class='name'>冻结金额</text>
+      <text class='money red'>{{account.unPointAcount}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,74 @@
+<!--pages/order/order.wxml-->
+<import src="../../tpl/liorder/liorder.wxml" />
+<import src="../../tpl/notask/notask.wxml" />
+<view class='containder'>
+  <view wx:if='{{userFlag==1}}' class='listbar' bindtap='changeListBar'>
+    <view class='item {{activeItem==0?"active":""}}'>
+      <text data-item="0">服务订单</text>
+      <view class='line'></view>
+    </view>
+    <view class='item {{activeItem==1?"active":""}}'>
+      <text data-item="1">预约订单</text>
+      <view class='line'></view>
+    </view>
+  </view>
+  <view wx:if='{{activeItem==0}}'>
+    <view wx:if="{{list[0].length===0}}" class='notask-wrap'>
+      <template is="notask" data="{{text:noOrderTip}}" />
+    </view>
+    <view wx:else>
+      <view class='list' wx:for="{{list[0]}}" wx:key="item">
+        <template is="liorder" data="{{item,userFlag}}" />
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view wx:if="{{list[1].length===0}}" class='notask-wrap'>
+      <template is="notask" data="{{text:noOrderTip}}" />
+    </view>
+    <view wx:else>
+      <view class='list' wx:for="{{list[1]}}" wx:key="item">
+        <view class='order'>
+          <view class='order-title'>
+            <text class='title text-ellipsis'>{{item.remarkB}}</text>
+            <!-- <text class='status'>{{item.stateStr}}</text> -->
+            <view class='right'>
+              <text class='status}}'>{{item.stateStr}}</text>
+            </view>
+          </view>
+          <navigator class='content' url='../book-detail/book-detail?id={{item.id}}'>
+            <!-- <view class='row'>
+              <image src='/img/order/orderli-1.png'></image>
+              <text>{{item.remarkB}}</text>
+            </view> -->
+            <view class='row'>
+              <image src='/img/order/orderli-4.png'></image>
+              <text>{{item.reName}}</text>
+            </view>
+            <view class='row'>
+              <image src='/img/order/orderli-5.png'></image>
+              <text>{{item.remarkA}}</text>
+            </view>
+            <view class='row'>
+              <image src='/img/order/orderli-2.png'></image>
+              <text>{{item.time}}</text>
+            </view>
+            <view class='row'>
+              <image src='/img/order/orderli-3.png'></image>
+              <text class='text-ellipsis'>{{item.reAddress}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<form class='comment-input-wrap' bindsubmit="submitPrice" wx:if="{{showPriceModal}}">
+  <view class='comment-input'>
+    <input name="goodprice" class='left' type='digit' auto-height placeholder="请输入订单价格" focus='{{showPriceModal}}'></input>
+    <view class='right'>
+      <button size='mini' formType="submit">提交</button>
+    </view>
+  </view>
+</form>

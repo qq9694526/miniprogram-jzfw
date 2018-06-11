@@ -1,0 +1,95 @@
+/* pages/order-confrim/order-confrim.wxss */
+.choose{
+  display: flex;
+   padding: 40rpx 20rpx; 
+  border: 2px dashed #ccc;
+  align-items: center;
+    background-color: #fff;
+  margin-bottom: 20rpx; 
+  /* color: #a8a8a8; */
+}
+.choose .icon{
+  flex: 0 0 40rpx;
+  width: 40rpx;
+  height: 48rpx;
+}
+.choose .icon.arrow{
+  flex: 0 0 25rpx;
+  width: 25rpx;
+}
+.address{
+  flex: 1;
+  /* padding: 40rpx 20rpx; */
+  /* border-bottom: 1px solid #eee; */
+  color: #8a8a8a;
+  margin-left: 20rpx;
+}
+.address .name{
+  margin-right: 40rpx;
+}
+.address .info{
+  font-size: 24rpx;
+}
+.text-bold{
+  margin-bottom: 10rpx;
+  color: #333;
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.section-image{
+  width: 100%;
+  height: 250rpx;
+  margin-bottom: 20rpx;
+}
+.item{
+  display: flex;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.item .img{
+  flex:  0 0 150rpx;
+  width: 150rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+}
+.item .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24rpx;  
+}
+.item .name{
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.desc{
+  color: #a8a8a8;
+}
+.text-red{
+  font-size: 28rpx;  
+  color: #d81e06;
+}
+.tips{
+  background-color: #fff;
+  font-size: 24rpx;
+  color: #a8a8a8;
+  padding: 20rpx;
+}
+.tips .title{
+  display: block;
+  font-weight: 600;
+  color: #333;
+  line-height: 2;
+}
+.tips .row{
+  display: block;
+  line-height: 1.5;  
+  margin-bottom: 10rpx;
+}

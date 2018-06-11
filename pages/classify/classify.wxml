@@ -1,0 +1,32 @@
+<!--pages/classify/classify.wxml-->
+<import src="../../tpl/notask/notask.wxml" />
+<view class='container'>
+  <view class='menu-wrap'>
+    <view class="menu {{index===activeIndex?'active':''}}" wx:for="{{menus}}" wx:key="item" bindtap='setCurrentActive' data-id='{{item.id}}' data-index="{{index}}">
+      <text>{{item.clfcName}}</text>
+    </view>
+  </view>
+  <view class='content'>
+    <scroll-view class='scroll-view' scroll-y="true">
+      <!-- <image class='section-image' mode="widthFix" src='{{menus[activeIndex].picturreUrl}}'></image> -->
+      <!-- <text class='title'>{{menus[activeIndex].clfcName}}</text> -->
+      <view wx:if="{{items.length===0}}" class='notask-wrap'>
+        <template is="notask" data="{{text:'该分类暂无服务'}}" />
+      </view>
+      <view wx:else class='list'>
+        <view class='item' bindtap='goService' wx:for="{{items}}" wx:key="item" data-id='{{item.id}}'>
+          <image class='img' src='{{item.imageUrl}}' mode='scaleToFill'></image>
+          <view class='info'>
+            <text class='name'>{{item.goodsTitle}}</text>
+            <text class='desc'>{{item.goodsSub}}</text>
+            <view class='price' wx:if="{{item.goodsPrice}}">
+              <text class='text-red'>{{item.goodsPrice}}</text>
+              <text wx:if="{{item.remarkA}}">{{item.remarkA}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

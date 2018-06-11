@@ -1,0 +1,15 @@
+<template name="litask">
+    <view class='litask'>
+      <view class='headimg'>
+        <image src='{{item.userPhoto}}'></image>
+      </view>
+      <view class='taskinfo'>
+        <text class='tasktitle'>{{item.userName}}</text>
+        <view class='taskcreater'>
+          <text class='executors'>{{item.userMobile}}</text>
+          <text class='time'>{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+
+</template>

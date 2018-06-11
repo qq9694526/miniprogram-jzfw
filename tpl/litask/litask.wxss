@@ -1,0 +1,36 @@
+.litask{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  padding:30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.headimg{
+  margin-right: 20rpx;
+}
+.headimg image{
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+}
+.headimg text{
+  text-align: center;
+  white-space: nowrap;
+}
+.taskinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 100%;
+  height: 120rpx;
+}
+.taskinfo text{
+  display: block;
+}
+.taskcreater{
+  font-size: 28rpx;
+  color: #ccc;
+}

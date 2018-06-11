@@ -1,0 +1,40 @@
+/* pages/recomm/recomm.wxss */
+@import "../../tpl/notask/notask.wxss";
+@import "../../tpl/litask/litask.wxss";
+
+.notask-wrap {
+  margin-top: 200rpx;
+}
+
+.listbar {
+  display: flex;
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: #1999d7;
+  color: #fff;
+}
+.listbar .line{
+  height: 1px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 15rpx;
+  background-color: #fff;
+}
+.listbar .active .line {
+  opacity: 0;
+}
+
+.listbar text {
+  padding: 10rpx 0;
+}
+
+.listbar .item {
+  width: 50%;
+  text-align: center;
+  /* padding: 20rpx 0; */
+  font-size: 32rpx;
+  /* border-right: 1px solid #eee; */
+}
+.item{
+  margin-top:20rpx;
+}

@@ -1,0 +1,211 @@
+/* pages/book-detail/book-detail.wxss */
+
+.container {
+  padding-bottom: 160rpx;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+  background-color: #1c9ad7;
+  margin-bottom: 20rpx;
+  color: #fff;
+}
+
+.top .title {
+  padding: 20rpx;
+  font-weight: 600;
+  font-size: 36rpx;
+}
+
+.top image {
+  width: 430rpx;
+  height: 200rpx;
+}
+
+.address {
+  display: flex;
+  background-color: #fff;
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.address .icon {
+  flex: 0 0 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.address .content {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.address .tel {
+  margin-left: 50rpx;
+}
+
+.address .row2 {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.main {
+}
+
+.list {
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.list .row {
+  display: flex;
+  padding: 10rpx 0;
+}
+
+.list .space-between {
+  justify-content: space-between;
+}
+
+.list .label {
+  color: rgb(149, 149, 156);
+  margin-right: 30rpx;
+  flex:0 0 120rpx;
+}
+
+.btns {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  text-align: right;
+}
+.btns button{
+  vertical-align: middle;
+}
+
+.btns .red {
+  margin-left: 20rpx;
+  border: 1px solid #d81e06;
+  color: #f7504a;
+  vertical-align: middle;
+}
+
+.btns .totle {
+  vertical-align: middle;
+  color: #f7504a;
+}
+
+.comment-input {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  padding: 20rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(234, 234, 234);
+  align-items: middle;
+}
+
+.comment-input .left {
+  flex: 1 1 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-input .right {
+  flex: 0 0 auto;
+}
+
+.comment-input textarea {
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  height: 1.2;
+  padding: 10rpx;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  z-index: 10;
+}
+
+.comment-form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.comment-form .title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 600;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.comment-form .row {
+  padding: 10rpx 0;
+  line-height: 1;
+}
+
+.comment-form .btn-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-top: 1px solid #eee;
+}
+
+.comment-form .btn-area button {
+  font-size: 32rpx;
+  margin: 0;
+}
+
+.comment-form .btn-area .red {
+  border: 1px solid #d81e06;
+  color: #d81e06;
+}
+
+.coupon {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 30rpx 20rpx;
+  line-height: 1;
+  margin-bottom: 20rpx;
+}
+
+.coupon .icon {
+  width: 18rpx;
+  height: 30rpx;
+  vertical-align: bottom;
+  margin-left: 15rpx;
+}
+
+.coupon .picker {
+  display: inline-block;
+}

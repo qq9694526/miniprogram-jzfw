@@ -1,0 +1,156 @@
+/* pages/gorder-list/gorder-list.wxss */
+@import "../../tpl/notask/notask.wxss";
+.notask-wrap{
+  margin-top: 200rpx;
+}
+.listbar {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.listbar .line {
+  height: 4rpx;
+  width: 65%;
+  margin: 0 auto;
+  background-color: #1999d7;
+}
+
+.listbar .active {
+  color: #1999d7;
+}
+
+.listbar .line {
+  opacity: 0;
+}
+
+.listbar .active .line {
+  opacity: 1;
+}
+
+.listbar text {
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.listbar .item {
+  width: 25%;
+  text-align: center;
+  /* padding: 20rpx 0;  *//* border-right: 1px solid #eee; */
+}
+
+.goodslist {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.goodslist .title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx;
+  line-height: 1;
+}
+
+.section-image {
+  width: 100%;
+  height: 250rpx;
+  margin-bottom: 20rpx;
+}
+
+.goodslist .item {
+  display: flex;
+  padding: 30rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  box-sizing:border-box;
+}
+.image-wrap{
+  display: flex;
+  background-color: #f8f8f8;
+  padding:30rpx;
+  width: 100%;
+}
+.image-wrap .image{
+  flex:  0 0 120rpx;
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 10rpx;
+}
+.goodslist .good-wrap{
+  width: 100%;
+}
+.goodslist .item .img {
+  flex: 0 0 120rpx;
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+}
+
+.goodslist .item .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+
+.goodslist .item .name {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.goodslist .item .price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-red {
+  color: #f7504a;
+}
+
+.goodslist .desc {
+  color: #a8a8a8;
+}
+
+.list {
+}
+
+.list .cell {
+  background-color: #fff;
+  padding: 20rpx 0;
+  margin-top: 20rpx;
+}
+
+.list .info {
+  font-size: 24rpx;
+  line-height: 2;
+  padding: 0 20rpx;
+}
+
+.list .goodslist .item {
+  background-color: #f8f8f8;
+}
+
+.list .row1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list .row2 {
+  color: grey;
+}
+
+.list .money {
+  padding: 0 20rpx;
+  text-align: right;
+}

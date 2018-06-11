@@ -1,0 +1,62 @@
+<!--pages/book-detail/book-detail.wxml-->
+<view class='container'>
+  <view class='top'>
+    <image src='{{stateTabel.icon}}'></image>
+    <text class='title'>{{stateTabel.title}}</text>
+    <text class='tip'>{{stateTabel.desc}}</text>
+  </view>
+  <view class='address'>
+    <image class='icon' src='/img/home-0.png'></image>
+    <view class='content'>
+      <view class='row1'>
+        <text>{{order.reName}}</text>
+        <text class='tel'>{{order.remarkA}}</text>
+      </view>
+      <text class='row2 text-ellipsis'>{{order.reAddress}}</text>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='list'>
+      <view class='row'>
+        <text class='label'>订单状态</text>
+        <text>{{stateTabel.name}}</text>
+      </view>
+      <view class='row'>
+        <text class='label'>服务类型</text>
+        <text>{{order.remarkB}}</text>
+      </view>
+      <!-- <view class='row'>
+        <text class='label'>服务描述</text>
+        <text>{{order.}}</text>
+      </view> -->
+      <view class='row' wx:if="{{order.serviceTime}}">
+        <text class='label'>服务时间</text>
+        <text>{{order.serviceTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='row space-between'>
+      <text class='label'>订单编号</text>
+      <text>{{order.remarkA}}</text>
+    </view>
+    <view class='row space-between'>
+      <text class='label'>下单时间</text>
+      <text>{{order.time}}</text>
+    </view>
+    <!-- <view class='row space-between' wx:if="{{order.goodsPrice}}">
+      <text class='label'>订单总价</text>
+      <text>{{order.goodsPrice}}元</text>
+    </view> -->
+  </view>
+  <view class='btns' wx:if="{{stateTabel.btn=='施工结束'}}">
+    <button size='mini' bindtap='compltOrder' class='red'>施工结束</button>
+  </view>
+</view>
+
+<view class='comment-input' wx:if="{{showPriceModal}}">
+  <input class='left' type='digit' bindblur="priceBlur" auto-height placeholder="请输入服务价格" focus='{{showPriceModal}}'></input>
+  <view class='right'>
+    <button size='mini' bindtap='changeStateOver'>提交</button>
+  </view>
+</view>

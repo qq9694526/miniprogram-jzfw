@@ -1,0 +1,160 @@
+/* pages/audit/audit.wxss */
+
+.item {
+  margin-top: 20rpx;
+}
+
+.title {
+  display: block;
+  background-color: #fff;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-wrap .item {
+  flex: 0 0 50%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.img-wrap image {
+  width: 100%;
+}
+
+.redbtn-fixed {
+  position: relative;
+}
+
+page {
+  background-color: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.tip {
+  line-height: 30rpx;
+  margin: 20rpx 0;
+  color: #a0a0a0;
+}
+
+.tip .icon {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+  margin: 0 6rpx;
+}
+
+.tip text {
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.form {
+  border-radius: 40rpx;
+  box-shadow: 0 0 4rpx #4e9cd6;
+  overflow: hidden;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdee4;
+}
+
+.row text {
+  flex: 0 0 140rpx;
+  line-height: 100rpx;
+}
+
+.row input {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+}
+
+.section {
+  background-color: #fff;
+  margin-top: 10px;
+  /* padding-left: 20rpx; *//* border-bottom: 1px solid #dcdee4; */
+}
+
+.section:not(:last-child) {
+  border-bottom: 1px solid #dcdee4;
+}
+
+.section-title {
+  line-height: 2;
+}
+
+.link {
+  text-align: right;
+  margin-bottom: 10rpx;
+  padding-right: 20rpx;
+  line-height: 2;
+}
+
+.choose .icon.arrow {
+  flex: 0 0 25rpx;
+  width: 25rpx;
+}
+
+.choose {
+  display: flex;
+  padding: 40rpx 20rpx;
+  /* border: 2px dashed #ccc; */
+  border-bottom: 1px solid #dcdee4;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  /* color: #a8a8a8; */
+}
+
+.choose .icon {
+  flex: 0 0 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.address {
+  flex: 1;
+  /* padding: 40rpx 20rpx; *//* border-bottom: 1px solid #eee; */
+  color: #a0a0a0;
+  margin-left: 20rpx;
+}
+
+.address .name {
+  margin-right: 40rpx;
+}
+
+.address .info {
+  font-size: 24rpx;
+}
+
+.workers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+}
+
+.workers .item {
+  color: #a0a0a0;
+  padding: 4rpx 40rpx;
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  background-color: #ededed;
+  border-radius: 30rpx;
+  margin: 0 10rpx 10rpx 0;
+}
+
+.workers .item.active {
+  color: #549cd6;
+  border: 1px solid #549cd6;
+  background-color: #eef5fb;
+}

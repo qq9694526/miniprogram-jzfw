@@ -1,0 +1,33 @@
+<template name="liorder">
+  <view class='order'>
+    <view class='order-title'>
+      <text class='title'>{{item.goodsName}}</text>
+      <view class='right'>
+        <text  wx:if="{{userFlag==1&&(item.orderState==1||item.orderState==2)}}" class='changeprice' bindtap='showPriceModal' data-id='{{item.id}}'>改价</text>
+        <text class='status {{item.stateStr=="已取消"?"grey":""}}'>{{item.stateStr}}</text>
+      </view>
+    </view>
+    <navigator class='content' url='/pages/order-detail/order-detail?id={{item.id}}&orderReceiving={{userFlag}}'>
+      <view class='row'>
+        <image src='/img/order/orderli-6.png'></image>
+        <text>{{item.goodsPrice}}元</text>
+      </view>
+      <view wx:if="{{userFlag==1}}" class='row'>
+        <image src='/img/order/orderli-4.png'></image>
+        <text>{{item.orderUser}}</text>
+      </view>
+      <view wx:if="{{userFlag==1}}" class='row'>
+        <image src='/img/order/orderli-5.png'></image>
+        <text>{{item.userTele}}</text>
+      </view>
+      <view class='row'>
+        <image src='/img/order/orderli-2.png'></image>
+        <text>{{item.time}}</text>
+      </view>
+      <view class='row'>
+        <image src='/img/order/orderli-3.png'></image>
+        <text class='text-ellipsis'>{{item.address}}</text>
+      </view>
+    </navigator>
+  </view>
+</template>

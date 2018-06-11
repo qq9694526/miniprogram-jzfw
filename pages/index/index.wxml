@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<import src="../../tpl/liorder/liorder.wxml" />
+<import src="../../tpl/notask/notask.wxml" />
+<view class='container'>
+  <swiper class="section" autoplay='true' indicator-dots="true">
+    <swiper-item wx:for="{{banner}}">
+      <image src="{{item.imageUrl}}" class="slide-image" style='width:100%' mode='widthFix' />
+    </swiper-item>
+  </swiper>
+  <view class='user'>
+    <view class='fx-4' wx:if="{{goods}}">
+      <navigator class='item' url='../classify/classify'>
+        <image src='/img/index/menuicon1.png'></image>
+        <text>零工服务</text>
+      </navigator>
+      <navigator class='item' url='../audit/audit'>
+        <image src='/img/index/menuicon2.png'></image>
+        <text>师傅入驻</text>
+      </navigator>
+      <navigator class='item' url='../coupons-all/coupons-all'>
+        <image src='/img/index/menuicon3.png'></image>
+        <text>领券中心</text>
+      </navigator>
+      <navigator class='item' url='../cash/cash'>
+        <image src='/img/index/menuicon4.png'></image>
+        <text>当面付款</text>
+      </navigator>
+    </view>
+    <view class='section-title' wx:if="{{contnets}}">
+      <image src='/img/index/ticon1.png'></image>
+      <text>公告活动</text>
+      <navigator class='more' url='../activity-list/activity-list'>
+        <text>更多>></text>
+      </navigator>
+    </view>
+    <view class='notice-wrap'>
+      <view class='notice' wx:for="{{contnets}}" wx:key="item" bindtap='goActivity' data-id='{{item.id}}'>
+        <view class='title'>
+          <text>{{item.conTitle}}</text>
+        </view>
+        <!-- <view class='time'>
+          <text>{{item.time}}</text>
+        </view> -->
+      </view>
+    </view>
+    <view class='section-title' wx:if="{{goods}}">
+      <image src='/img/index/ticon2.png'></image>
+      <text>服务推荐</text>
+      <navigator class='more' url='../classify/classify'>
+        <text>更多>></text>
+      </navigator>
+    </view>
+    <view class='worker-wrap'>
+      <navigator class='worker' wx:for="{{goods}}" wx:key="item" url='../service/service?id={{item.id}}'>
+        <image class='worker-img' src='{{item.remarkC}}'></image>
+        <view class='worker-info'>
+          <text class='worker-name'>{{item.goodsTitle}}</text>
+          <text class='worker-desc text-ellipsis2'>{{item.goodsSub}}</text>
+        </view>
+      </navigator>
+    </view>
+    <view class='section-title' wx:if="{{marketGoods}}">
+      <image src='/img/index/ticon3.png'></image>
+      <text>零材推荐</text>
+      <navigator class='more' url='../goods-classify/goods-classify' open-type="switchTab">
+        <text>更多>></text>
+      </navigator>
+    </view>
+    <view class='fx-4'>
+      <navigator class='item' wx:for="{{marketGoods}}" url='../goods-detail/goods-detail?id={{item.id}}'>
+        <image src='{{item.listPicture1}}'></image>
+        <text>{{item.goodsName}}</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='modal' wx:if="{{showGetTelModal}}">
+    系统需要获取您的手机号码以方便客户与您联系
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">同意获取手机号码 </button>
+  </view>
+</view>

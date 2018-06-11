@@ -1,0 +1,57 @@
+<!--pages/audit/audit.wxml-->
+<view class='container'>
+  <view class='tip'>
+    <image class='icon' src='/img/icon!.png'></image>
+    <text wx:if='{{audit.handelResult==2}}'>您的申请已提交，请耐心等待。</text>
+    <text wx:elif='{{audit.handelResult==0}}'>恭喜您，已通过审核</text>
+    <text wx:elif='{{audit.handelResult==1}}'>审核未通过，请修改后重新提交</text>
+    <text wx:else>欢迎成为零工师傅，请认真填写以下资料。</text>
+  </view>
+  <form bindsubmit="save">
+    <view class='form'>
+      <view class='row'>
+        <text>姓名</text>
+        <input name="userName" type='text' placeholder='请输入您的真实姓名' value='{{audit.userName||""}}' disabled="{{readOnly}}"></input>
+      </view>
+      <view class='row'>
+        <text>手机号码</text>
+        <input name="userMobile" type='text' placeholder='请输入您的手机号码' value='{{audit.userMobile||""}}' disabled="{{readOnly}}"></input>
+      </view>
+      <view class='row'>
+        <text>身份证号</text>
+        <input name="cardnum" type='text' placeholder='请输入您的身份证号' value='{{audit.userMobile||""}}' disabled="{{readOnly}}"></input>
+      </view>
+      <view class='section'>
+        <view class='section-title'>申请的工种（只能选择一项）</view>
+        <view class='workers'>
+          <text class='item {{activeIndex==index?"active":""}}' wx:for='{{workers}}' bindtap='changeWorkerType' data-index='{{index}}'>{{item}}</text>
+        </view>
+      </view>
+      <view class='section'>
+        <view class='section-title'>身份证上传</view>
+        <view class='img-wrap'>
+          <view class='item' bindtap='chooseImage' data-index="0">
+            <image mode="widthFix" src='{{audit.idCardAddress1||PlaceHolderImages[0]}}'></image>
+          </view>
+          <view class='item' bindtap='chooseImage' data-index="1">
+            <image mode="widthFix" src='{{audit.idCardAddress2||PlaceHolderImages[1]}}'></image>
+          </view>
+        </view>
+      </view>
+      <view class='section'>
+        <view class='section-title'>上传资质证书（选填）</view>
+        <view class='img-wrap'>
+          <view class='item' bindtap='chooseImage' data-index="2">
+            <image mode="widthFix" src='{{audit.qualifyCertificate||PlaceHolderImages[2]}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="redbtn-fixed">
+      <button wx:if='{{audit.handelResult==2}}'>审核中...</button>
+      <button wx:elif='{{audit.handelResult==0}}'>审核已通过</button>
+      <button wx:else formType="submit">提交申请</button>
+    </view>
+
+  </form>
+</view>

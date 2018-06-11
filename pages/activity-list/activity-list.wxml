@@ -1,0 +1,11 @@
+
+<view class='notice-wrap'>
+      <view class='notice' wx:for="{{contnets}}" wx:key="item" bindtap='goActivity' data-id='{{item.id}}'>
+        <view class='title'>
+          <text>{{item.conTitle}}</text>
+        </view>
+        <view class='time'>
+          <text>{{item.time}}</text>
+        </view>
+      </view>
+    </view>

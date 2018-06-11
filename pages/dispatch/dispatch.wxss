@@ -1,0 +1,110 @@
+/* pages/dispatch/dispatch.wxss */
+@import "../../tpl/notask/notask.wxss";
+@import "../../tpl/liorder/liorder.wxss";
+
+.notask-wrap {
+  margin-top: 200rpx;
+}
+
+.listbar {
+  display: flex;
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: #1999d7;
+  color: #fff;
+}
+
+.listbar .line {
+  height: 1px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 15rpx;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.listbar .active .line {
+  opacity: 1;
+}
+
+.listbar text {
+  padding: 10rpx 0;
+}
+
+.listbar .item {
+  width: 50%;
+  text-align: center;
+  /* padding: 20rpx 0; */
+  font-size: 32rpx;
+  /* border-right: 1px solid #eee; */
+}
+
+.picker {
+  color: #83b5e0;
+  line-height: 1;
+  padding: 5rpx 10rpx;
+  border: 1px solid #83b5e0;
+  border-radius: 5rpx;
+}
+
+.picker.green {
+  color: #3adda3;
+  border: 1px solid #3adda3;
+}
+
+.order-title .right {
+  display: flex;
+  min-width: 100rpx;
+  justify-content: flex-end;
+}
+
+.order-title .changeprice {
+  color: #83b5e0;
+  line-height: 1;
+  padding: 5rpx 10rpx;
+  border: 1px solid #83b5e0;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  margin-right: 30rpx;
+}
+
+.comment-input-wrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.comment-input button {
+  margin-top: 20rpx;
+}
+
+.comment-input {
+  display: flex;
+  width: 100%;
+  z-index: 100;
+  padding: 20rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(234, 234, 234);
+  align-items: middle;
+}
+
+.comment-input .left {
+  flex: 1 1 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-input .right {
+  flex: 0 0 auto;
+}
+
+.comment-input textarea {
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  height: 1.2;
+  padding: 10rpx;
+}

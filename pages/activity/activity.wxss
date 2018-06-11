@@ -1,0 +1,21 @@
+/* pages/activity/activity.wxss */
+@import "/tpl/wxParse/wxParse.wxss";
+page{
+  background-color: #fff;
+}
+.container{
+  padding: 20rpx;
+}
+.title{
+  font-size: 40rpx;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.time{
+  color: #999;
+  padding: 0;
+  margin-bottom: 20rpx;
+}
+.content{
+}

@@ -1,0 +1,19 @@
+<!--pages/coupons-my/coupons-my.wxml-->
+<view wx:for="{{coupons}}">
+  <view class='item {{item.sendType==2?"yellow":"red"}}'>
+    <view class='left'>
+      <view class='icon'></view>
+      <text class='money'>{{item.couponMoney}}</text>
+    </view>
+    <view class='right'>
+      <text class='name'>{{item.couponName}}</text>
+      <text class='time'>过期时间：{{item.time}}</text>
+      <view>
+
+        <view wx:if='{{item.hasEnd}}' class='btn grey'>已过期</view>
+        <navigator wx:else class='btn' url='../goods-classify/goods-classify' open-type='switchTab'>立即使用</navigator>
+        
+      </view>
+    </view>
+  </view>
+</view>

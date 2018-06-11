@@ -1,0 +1,31 @@
+<!--pages/book-my/book-my.wxml-->
+<import src="../../tpl/notask/notask.wxml" />
+<view class='containder'>
+  <view wx:if="{{list.length===0}}" class='notask-wrap'>
+    <template is="notask" data="{{text:'您还没有预约'}}" />
+  </view>
+  <view wx:else>
+    <view class='list' wx:for="{{list}}" wx:key="item">
+      <navigator class='order' url='../book-detail/book-detail?id={{item.id}}'>
+        <view class='order-title'>
+          <text class='title text-ellipsis'>{{item.remarkB}}</text>
+          <text class='status'>{{stateStr[item.reState]}}</text>
+        </view>
+        <view class='content'>
+          <view class='row'>
+            <image src='/img/order/orderli-1.png'></image>
+            <text>{{item.remarkB}}</text>
+          </view>
+          <view class='row'>
+            <image src='/img/order/orderli-2.png'></image>
+            <text>{{item.time}}</text>
+          </view>
+          <view class='row'>
+            <image src='/img/order/orderli-3.png'></image>
+            <text class='text-ellipsis'>{{item.reAddress}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

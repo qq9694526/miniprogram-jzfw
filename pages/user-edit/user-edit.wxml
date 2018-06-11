@@ -1,0 +1,49 @@
+<!--pages/user-edit/uesr-edit.wxml-->
+<!--pages/audit/audit.wxml-->
+<view class='container'>
+  <form bindsubmit="formSubmit">
+    <view class='form'>
+      <view class='row'>
+        <text>姓名</text>
+        <input type='text' placeholder='请填写您的真实姓名' value='{{user.userName}}' name="userName"></input>
+      </view>
+      <view class='row'>
+        <text>手机号</text>
+        <input type='number' placeholder='请填写您的手机号码' value='{{user.userMobile}}' name="userMobile"></input>
+      </view>
+      <view class='row'>
+        <text>微信号</text>
+        <input type='text' placeholder='请填写您的微信号' value='{{user.userWxId}}' name="userWxId"></input>
+      </view>
+      <view class='row'>
+        <text>地址</text>
+        <input type='text' placeholder='请填写您的地址' value='{{user.userAddress}}' name="userAddress"></input>
+      </view>
+      <view class='row'>
+        <text>身份证号</text>
+        <input type='idcard' placeholder='' disabled='true' value='{{audit.remark1}}'></input>
+      </view>
+      <view class='row'>
+        <text>银行卡号</text>
+        <input type='number' placeholder='请填写您的银行卡号' value='{{user.userBankNum}}' name="userBankNum"></input>
+      </view>
+      <view wx:if="{{userFlag==1}}">
+        <view class='section'>
+          <view class='section-title'>身份证正反面照</view>
+          <view class='img-wrap'>
+            <view class='item' bindtap='chooseImage' data-index="0">
+              <image mode="widthFix" src='{{audit.idCardAddress1}}'></image>
+            </view>
+            <view class='item' bindtap='chooseImage' data-index="1">
+              <image mode="widthFix" src='{{audit.idCardAddress2}}'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="redbtn-fixed">
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

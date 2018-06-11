@@ -1,0 +1,135 @@
+/* pages/book/book.wxss */
+
+page {
+  background-color: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.tip {
+  line-height: 30rpx;
+  margin: 20rpx 0;
+  color: #a0a0a0;
+}
+
+.tip .text-wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tip navigator {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #1099d7;
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 8rpx 15rpx;
+  margin: 0 5rpx;
+}
+
+.tip .icon {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+  margin: 0 6rpx;
+}
+
+.tip text {
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.form {
+  border-radius: 40rpx;
+  box-shadow: 0 0 4rpx #4e9cd6;
+  overflow: hidden;
+  padding: 20rpx;
+}
+
+.section {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding-left: 20rpx;
+  /* border-bottom: 1px solid #dcdee4; */
+}
+
+.section:not(:last-child) {
+  border-bottom: 1px solid #dcdee4;
+}
+
+.section__title {
+  line-height: 2;
+}
+
+.link {
+  text-align: right;
+  margin-bottom: 10rpx;
+  padding-right: 20rpx;
+  line-height: 2;
+}
+
+.choose .icon.arrow {
+  flex: 0 0 25rpx;
+  width: 25rpx;
+}
+
+.choose {
+  display: flex;
+  padding: 40rpx 20rpx;
+  /* border: 2px dashed #ccc; */
+  border-bottom: 1px solid #dcdee4;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  /* color: #a8a8a8; */
+}
+
+.choose .icon {
+  flex: 0 0 40rpx;
+  width: 40rpx;
+  height: 48rpx;
+}
+
+.address {
+  flex: 1;
+  /* padding: 40rpx 20rpx; *//* border-bottom: 1px solid #eee; */
+  color: #a0a0a0;
+  margin-left: 20rpx;
+}
+
+.address .name {
+  margin-right: 40rpx;
+}
+
+.address .info {
+  font-size: 24rpx;
+}
+
+.workers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+}
+
+.workers .item {
+  color: #a0a0a0;
+  padding: 4rpx 40rpx;
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  background-color: #ededed;
+  border-radius: 30rpx;
+  margin: 0 10rpx 10rpx 0;
+}
+
+.workers .item.active {
+  color: #549cd6;
+  border: 1px solid #549cd6;
+  background-color: #eef5fb;
+}
+
+textarea {
+  margin-top: 20rpx;
+}
+.redbtn-fixed{
+  position: relative;
+  margin-top: 40rpx;
+}
